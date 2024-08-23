@@ -1,0 +1,777 @@
+  *,
+  *::before,
+  *::after {
+      box-sizing: border-box;
+  }
+  
+  body {
+      margin: 0;
+  }
+  
+  ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+  }
+  
+  a {
+      text-decoration: none;
+  }
+  
+  input:focus {
+      border: 1px solid #e50606;
+      outline: 1px solid #e50606;
+  }
+  
+  textarea:focus {
+      border: 1px solid #e50606;
+      outline: 1px solid #e50606;
+  }
+  
+  #home {
+      background-color: #eeeeee;
+      /* height: 110vh; */
+  }
+  
+  .navbar {
+      padding: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 9999;
+      /* background-color: blue; */
+  }
+  
+  .navbar a {
+      color: black;
+  }
+  
+  .navbar .logo {
+      flex: 1 1 50%;
+      /* background-color: rgb(0, 255, 102); */
+      font-size: 30px;
+      font-weight: 700;
+      color: #212529;
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  
+  .navbar .logo .vip-dott {
+      color: red;
+  }
+  
+  .navbar .nav-list {
+      order: 1;
+      flex: 1 1 50%;
+      /* background-color: rgb(255, 0, 183); */
+  }
+  
+  .navbar .nav-list li {
+      padding: 10px;
+  }
+  
+  .navbar .nav-list a {
+      color: #434141;
+      font-weight: 600;
+      font-size: 17px;
+      position: relative;
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  
+  .navbar .nav-list a::before {
+      content: "";
+      background-color: transparentr;
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      top: 115%;
+      transition: all 0.3s;
+  }
+  
+  .navbar .nav-list a:hover::before {
+      background-color: #ce1212;
+      width: 100%;
+  }
+  
+  .navbar .nav-list a.vip-home::before {
+      content: "";
+      background-color: #ce1212;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top: 115%;
+  }
+  
+  .navbar .light-dark-mode {
+      flex: 1 1 50%;
+      text-align: right;
+      /* background-color: rgb(255, 0, 0); */
+  }
+  
+  .navbar .light-dark-mode img {
+      width: 30px;
+  }
+  /* ------------------------END nav bar--------------------------------------------------------------- */
+  
+  #home .contaner {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+  }
+  
+  #home .book-table-data {
+      order: 1;
+      flex: 0 1 100%;
+      text-align: center;
+      vertical-align: middle;
+  }
+  
+  #home .image-reserv {
+      flex: 0 1 100%;
+      /* background-color: #19862b; */
+      text-align: center;
+      vertical-align: middle;
+      padding-left: 4rem;
+  }
+  
+  #home .book-table-data h2 {
+      color: #37373f;
+      font-weight: 700;
+      font-size: 65px;
+      font-family: "Amatic SC", sans-serif;
+  }
+  
+  #home .book-table-data p {
+      color: #4f4f5a;
+      font-weight: 400;
+      font-size: 16px;
+      font-family: "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  
+  #home .book-table-data .buttons-booking {
+      padding: 20px;
+  }
+  
+  #home .book-table-data .buttons-booking .play-vid img {
+      width: 40px;
+      vertical-align: middle;
+  }
+  
+  #home .book-table-data .buttons-booking button {
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      background-color: #ce1212;
+      width: 30%;
+      height: 50px;
+      border-radius: 100vh;
+      border: none;
+      cursor: pointer;
+      transition: all .3s;
+  }
+  /*  */
+  
+  #home .book-table-data .buttons-booking button:hover {
+      background-color: #f42121;
+  }
+  
+  #home .book-table-data .buttons-booking button.vip-button {
+      color: rgb(0, 0, 0);
+      background-color: transparent;
+      vertical-align: middle;
+      padding: 0;
+      font-weight: 600;
+      font-size: 20px;
+      cursor: pointer;
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      transition: all .5s;
+  }
+  
+  #home .book-table-data .buttons-booking button.vip-button:hover {
+      color: rgb(237, 22, 22);
+  }
+  
+  #home .image-reserv img {
+      filter: drop-shadow(8px 8px 10px gray);
+      width: 100%;
+      transition: all .1s;
+      animation-duration: 0.3s;
+      /* animation-timing-function: linear; */
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+  }
+  
+  #home .image-reserv img:hover {
+      transform: translateX(5px);
+      animation-name: img-inemation;
+  }
+  
+  @keyframes img-inemation {
+      0% {
+          transform: translateX(1.5px);
+      }
+      50% {
+          transform: translateY(-1.5px);
+      }
+      60% {
+          transform: translateX(0px);
+      }
+      70% {
+          transform: translateY(1.5px);
+      }
+      80% {
+          transform: translateY(0px);
+      }
+      100% {
+          transform: translateX(-1.5px);
+      }
+  }
+  /* ------------------------END HOME SECTION--------------------------------------------------------------- */
+  /* -------------------------------CHEFS SECTION-------------------------------------------------------- */
+  
+  #Chefs {
+      background-color: rgb(255, 255, 255);
+      padding: 50px;
+  }
+  
+  #Chefs .contaner {
+      width: 95%;
+      /* background-color: chartreuse; */
+      margin: auto;
+      /* background-color: rgb(255, 255, 255); */
+  }
+  
+  #Chefs .contaner h2 {
+      /* background-color: rgb(24, 18, 138); */
+      text-align: center;
+      color: #7f7f90;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: Inter, sans-serif;
+      margin: 10px;
+  }
+  
+  #Chefs .contaner p {
+      /* background-color: rgb(24, 18, 138); */
+      text-align: center;
+      color: #212529;
+      font-size: 50px;
+      font-weight: 400;
+      font-family: "Amatic SC", sans-serif;
+      margin: 0px 0 20px 0;
+      ;
+  }
+  
+  #Chefs .contaner p .vip-prof-word {
+      color: #ce1212;
+  }
+  
+  .chefs-item {
+      padding: 20px;
+      /* background-color: rgb(72, 30, 66); */
+  }
+  
+  .chefs-item .chef {
+      width: 100%;
+      /* width: 33.33 ..... at midea q%;*/
+      position: relative;
+      background-color: rgb(255, 255, 255);
+      overflow: hidden;
+      margin: 10px;
+      transition: all .5s;
+  }
+  
+  .chefs-item .chef:hover {
+      transform: scale(1.09);
+  }
+  
+  .chefs-item .chef .fixed-bar-link {
+      width: 10%;
+      height: 25%;
+      padding: 5px;
+      background-color: rgba(255, 255, 255, 0.3);
+      position: absolute;
+      right: 0;
+      top: 20px;
+      z-index: 999;
+      border-radius: 7%;
+      transform: translateX(110px);
+      transition: all .5s 0.5s;
+  }
+  
+  .chefs-item .chef:hover .fixed-bar-link {
+      transform: translateX(-10px);
+  }
+  
+  .chefs-item .fixed-bar-link img {
+      width: 50%;
+  }
+  
+  .chefs-item .chef img {
+      width: 100%;
+      border-radius: 10px;
+  }
+  
+  .chefs-item .chef .chef-card-content {
+      padding: 20px;
+      ;
+  }
+  
+  .chefs-item .chef .chef-card-content h3 {
+      font-size: 18.72px;
+      font-weight: 700;
+      color: #212529;
+      font-family: Inter, sans-serif;
+      text-align: center;
+  }
+  
+  #Chefs .chefs-item .chef .chef-card-content .vip-cardCotent {
+      color: #7f7f90;
+      font-size: 14px;
+      margin: auto;
+      font-weight: 400;
+      font-family: "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  
+  #Chefs .chefs-item .chef .chef-card-content p {
+      font-size: 15px;
+      font-weight: 400;
+      color: #7f7f90;
+      text-align: center;
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  
+  .chefs-item .chef .chef-card-img {
+      position: relative;
+  }
+  
+  .chefs-item .chef .chef-card-img .wave {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+  }
+  /* ------end chef section-------------------- */
+  
+  #Gallery {
+      background-color: #eeeeee;
+      padding: 50px 10px;
+  }
+  
+  #Gallery .contaner {
+      width: 95%;
+      /* background-color: chartreuse; */
+      margin: auto;
+  }
+  
+  #Gallery .contaner h2 {
+      /* background-color: rgb(24, 18, 138); */
+      text-align: center;
+      color: #7f7f90;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: Inter, sans-serif;
+      margin: 10px;
+  }
+  
+  #Gallery .contaner p {
+      /* background-color: rgb(24, 18, 138); */
+      text-align: center;
+      color: #212529;
+      font-size: 50px;
+      font-weight: 400;
+      font-family: "Amatic SC", sans-serif;
+      margin: 0px 0 20px 0;
+  }
+  
+  #Gallery .contaner p .vip-prof-word {
+      color: #ce1212;
+  }
+  
+  #Gallery .gallary-items {
+      /* background-color: rgb(223, 97, 97); */
+  }
+  
+  #Gallery .gallary-items .item-img {
+      margin: 10px;
+      width: 100%;
+      /* padding: 10px; */
+      border: solid 4px white;
+      /* background-color: rgb(60, 158, 106); */
+      position: relative;
+      overflow: hidden;
+  }
+  
+  #Gallery .gallary-items .item-img img {
+      width: 100%;
+  }
+  
+  #Gallery .gallary-items .item-img .caption-item-overlay {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(100%);
+      transition: all .5s;
+  }
+  
+  #Gallery .gallary-items .item-img:hover .caption-item-overlay {
+      transform: translateY(0);
+  }
+  
+  #Gallery .gallary-items .item-img .caption-item-overlay .caption-contain {
+      text-align: center;
+  }
+  
+  #Gallery .gallary-items .item-img .caption-item-overlay .caption-contain h2 {
+      font-family: Inter, sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: white;
+  }
+  
+  #Gallery .gallary-items .item-img .caption-item-overlay .caption-contain p {
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 16px;
+      color: #dddddd;
+      font-weight: 400;
+  }
+  /* ------------------------END GALLARY SECTION */
+  /* -----------------------CONTACT SECTION------------------------------------------- */
+  
+  #Contact {
+      background-color: white;
+      padding: 50px 10px;
+  }
+  
+  #Contact .contaner {
+      width: 95%;
+      /* background-color: chartreuse; */
+      margin: auto;
+  }
+  
+  #Contact .contaner h2 {
+      /* background-color: rgb(24, 18, 138); */
+      text-align: center;
+      color: #7f7f90;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: Inter, sans-serif;
+      margin: 10px;
+  }
+  
+  #Contact .contaner p {
+      /* background-color: rgb(24, 18, 138); */
+      text-align: center;
+      color: #212529;
+      font-size: 50px;
+      font-weight: 400;
+      font-family: "Amatic SC", sans-serif;
+      margin: 0px 0 20px 0;
+  }
+  
+  #Contact .contaner p .vip-prof-word {
+      color: #ce1212;
+  }
+  
+  #Contact .MAP-LOCATION {
+      /* background-color: rgba(4, 142, 11, 0.63); */
+      width: 100%;
+      margin-bottom: 20px;
+      /* padding: 50px 10px; */
+  }
+  
+  #Contact .cotact-information .tag-info-item {
+      width: 100%;
+      background-color: rgb(245, 245, 245);
+      padding: 20px;
+      margin-bottom: 20px;
+      /* margin-right: 5px; */
+      display: flex;
+      column-gap: 10px;
+      justify-content: flex-start;
+      align-items: flex-start;
+  }
+  
+  #Contact .cotact-information .tag-info-item .logo-info-item {
+      width: 50px;
+      height: 50px;
+      background-color: rgb(227, 32, 32);
+      border-radius: 50%;
+      padding: 5px;
+  }
+  
+  #Contact .cotact-information .tag-info-item .logo-info-item img {
+      width: 100%;
+  }
+  
+  #Contact .cotact-information .tag-info-item .details-info-item {
+      /* background-color: rgb(71, 18, 112); */
+  }
+  
+  #Contact .cotact-information .tag-info-item .details-info-item h3 {
+      color: #7d7d7d;
+      font-family: Inter, sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0;
+  }
+  
+  #Contact .cotact-information .tag-info-item .details-info-item p {
+      color: #212529;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  /* ----------------------------------- */
+  
+  #Contact form {
+      margin: 20px 0 40px 0;
+  }
+  
+  #Contact .form-contact {
+      padding: 10px;
+      transform: scale(1, 1);
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 0px 15px rgb(89, 89, 89);
+  }
+  
+  .name {
+      width: 100%;
+      padding: 12px 10px;
+  }
+  
+  #Contact .name input {
+      width: 100%;
+      padding: 20px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+  }
+  
+  .email {
+      width: 100%;
+      padding: 12px 10px;
+  }
+  
+  #Contact .email input {
+      width: 100%;
+      padding: 20px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+  }
+  
+  #Contact .subject {
+      width: 100%;
+      padding: 12px 10px;
+      margin-bottom: 30px;
+  }
+  
+  #Contact .subject input {
+      width: 100%;
+      padding: 20px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+  }
+  
+  #Contact .message {
+      width: 100%;
+      padding: 12px 10px;
+      margin-bottom: 30px;
+      text-align: left;
+  }
+  
+  #Contact .message textarea {
+      width: 100%;
+      padding: 20px;
+      border-radius: 4px;
+      resize: both;
+      border: 1px solid #ccc;
+  }
+  
+  #Contact .sendData {
+      width: 100%;
+      padding: 12px 10px;
+      margin: auto;
+      text-align: center;
+  }
+  
+  #Contact .sendData button {
+      width: 200px;
+      padding: 20px;
+      border-radius: 100vh;
+      text-align: center;
+      border: 0;
+      color: white;
+      background-color: #cc1212;
+      transition: all .4s;
+  }
+  
+  #Contact .sendData button:hover {
+      background-color: #ec2403;
+  }
+  /*-----------------------------END-----Contact Us--SECTION------------------------------------- */
+  /* ----------------footer section------------------- */
+  
+  #footer {
+      background-color: rgb(11, 9, 9);
+      display: flex;
+      justify-content: center;
+  }
+  
+  #footer .contaner {
+      width: 95%;
+      /* background-color: rgb(17, 120, 120); */
+  }
+  
+  #footer .left-card .logo-footer {
+      /* background-color: #e50606; */
+      display: flex;
+      column-gap: 20px;
+      padding: 10px;
+      align-items: center;
+  }
+  
+  #footer .left-card .logo-footer img {
+      width: 40px;
+      height: 40%;
+  }
+  
+  #footer .left-card .logo-footer h2 {
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 700;
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  
+  #footer .left-card .logo-footer .vip-dott {
+      color: red;
+  }
+  
+  #footer p {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      margin: 15px;
+  }
+  
+  #footer h3 {
+      color: #ffffff;
+      font-size: 18.72px;
+      font-weight: 700;
+      font-family: Inter, sans-serif;
+      text-align: center;
+  }
+  
+  #footer hr {
+      border: solid rgb(109, 109, 109) 1px;
+  }
+  
+  #footer .left-card ul {
+      display: flex;
+      column-gap: 50px;
+      padding: 10px;
+      justify-content: center;
+      align-items: flex-start;
+  }
+  
+  #footer .left-card ul img {
+      width: 60px;
+  }
+  
+  #footer .center-card h3 {
+      text-align: left;
+  }
+  
+  #footer .center-card input {
+      vertical-align: middle;
+      width: 70%;
+      padding: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+  }
+  
+  #footer .center-card input:focus {
+      border: 1px solid #ccc;
+      outline: 1px solid #ccc;
+  }
+  
+  #footer .center-card button {
+      vertical-align: middle;
+      background-color: #cc1212;
+      color: white;
+      border: none;
+      font-size: 18px;
+      padding: 0 15px 0 0;
+      margin-left: 5px;
+  }
+  
+  #footer .center-card img {
+      vertical-align: middle;
+      width: 50px;
+  }
+  
+  #footer .center-card .quick-links {
+      /* display: flex; */
+  }
+  
+  #footer .center-card .quick-links ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      text-align: left;
+  }
+  
+  #footer .center-card .quick-links ul li {
+      color: white;
+      width: 50%;
+      padding: 5px;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      transition: all .2s;
+  }
+  
+  #footer .center-card .quick-links ul a {
+      color: white;
+  }
+  
+  #footer .center-card .quick-links ul li:hover {
+      transform: scale(1.01) translateX(2%) translateY(1.5%);
+      background-color: rgba(34, 34, 34, 0.8);
+  }
+  
+  #footer .right-card h3 {
+      text-align: left;
+      margin-bottom: 0%;
+  }
+  
+  .fa-solid {
+      vertical-align: middle;
+      color: #ce1212;
+      font-size: 25px;
+  }
+  
+  #footer .right-card .vip-footer-location {
+      font-weight: 400;
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 16px;
+      color: #ffffff;
+      vertical-align: middle;
+  }
+  
+  #footer .right-card li {
+      padding: 10px;
+  }
+  /* -------------END---footer section------------------- */

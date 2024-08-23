@@ -1,0 +1,293 @@
+/* tailwind breakpoint */
+
+
+/* sm*/
+
+@media(min-width:640px) {
+    .sm-100 {
+        width: 100%
+    }
+    .sm-50 {
+        width: 50%
+    }
+    .sm-33 {
+        width: 33.33%
+    }
+    .sm-25 {
+        width: 25%
+    }
+}
+
+
+/* md */
+
+@media(min-width:768px) {
+    .md-100 {
+        width: 100%
+    }
+    .md-50 {
+        width: 50%
+    }
+    .md-33 {
+        width: 33.33%
+    }
+    .md-25 {
+        width: 25%
+    }
+}
+
+
+/* lg */
+
+@media(min-width:1024px) {
+    .lg-100 {
+        width: 100%
+    }
+    .lg-50 {
+        width: 50%
+    }
+    .lg-33 {
+        width: 33.33%
+    }
+    .lg-25 {
+        width: 25%
+    }
+}
+
+
+/* xl */
+
+@media(min-width:1280px) {
+    .xl-100 {
+        width: 100%
+    }
+    .xl-50 {
+        width: 50%
+    }
+    .xl-33 {
+        width: 33.33%
+    }
+    .xl-25 {
+        width: 25%
+    }
+}
+
+
+/* -------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------- */
+
+
+/* -------------for extra media in deffrent scale screen ------ copy and paste this part at the end of css file------------------------------------------- */
+
+
+/* sm*/
+
+@media(min-width:640px) {
+    .chefs-item {
+        display: flex;
+        column-gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .chefs-item .chef {
+        width: 40%;
+    }
+    #Gallery .gallary-items {
+        height: 1350px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+    #Gallery .gallary-items .item-img {
+        width: 50%;
+    }
+    #Contact .cotact-information {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #Contact .cotact-information .tag-info-item {
+        width: 70%;
+    }
+    #Contact .form-contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+
+/* md */
+
+@media(min-width:768px) {
+    #home {
+        height: 120vh;
+    }
+    .navbar {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 30px;
+    }
+    .navbar .nav-list {
+        order: 0;
+    }
+    .nav-list ul {
+        display: flex;
+        column-gap: 30px;
+    }
+    #home .contaner {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        top: 100px;
+        left: 5%;
+    }
+    #home .book-table-data {
+        order: 0;
+        flex: 0 1 50%;
+        text-align: left;
+        padding: 20px;
+    }
+    #home .image-reserv {
+        position: relative;
+        top: 40px;
+        padding: 10px;
+        flex: 0 1 50%;
+        /* background-color: #19862b; */
+        text-align: center;
+    }
+    #home .image-reserv img {
+        width: 100%;
+    }
+    #home .book-table-data .buttons-booking {
+        column-gap: 30px;
+        display: flex;
+    }
+    #home .book-table-data .buttons-booking .but-main {
+        flex: 0 1 30%;
+        vertical-align: middle;
+    }
+    #home .book-table-data .buttons-booking .play-vid {
+        flex: 0 1 50%;
+        vertical-align: middle;
+    }
+    #home .book-table-data .buttons-booking .play-vid button {
+        width: 80%;
+        text-align: left;
+    }
+    #home .book-table-data .buttons-booking button {
+        width: 100%;
+        color: white;
+        background-color: #ce1212;
+        border-top-left-radius: 0;
+        border-top-right-radius: 100vh;
+        border-bottom-right-radius: 100vh;
+        border-bottom-left-radius: 80vh;
+        border: none;
+    }
+    .chefs-item {
+        display: flex;
+        column-gap: 10px;
+    }
+    .chefs-item .chef {
+        width: 30%;
+    }
+    #Gallery .gallary-items {
+        height: 1200px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: flex-start;
+    }
+    #Gallery .gallary-items .item-img {
+        width: 32%;
+    }
+    #Contact .cotact-information {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    #Contact .cotact-information .tag-info-item {
+        width: 49%;
+    }
+    #Contact .form-contact {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: flex-start;
+        align-items: flex-start; */
+    }
+    #footer {
+        padding: 20px;
+    }
+    #footer .contaner {
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        row-gap: 10px;
+    }
+    #footer .contaner .left-card {
+        width: 50%;
+    }
+    #footer .contaner .center-card {
+        order: 1;
+        width: 100%;
+    }
+    #footer .contaner .right-card {
+        width: 50%;
+        padding-left: 20px;
+    }
+}
+
+
+/* lg */
+
+@media(min-width:1024px) {}
+
+
+/* xl */
+
+@media(min-width:1280px) {
+    #footer {
+        padding: 30px;
+    }
+    #footer .contaner {
+        width: 98%;
+        display: flex;
+        flex-wrap: nowrap;
+        column-gap: 10px;
+    }
+    #footer .contaner .left-card {
+        width: 25%;
+        padding: 0%;
+    }
+    #footer .contaner .left-card p {
+        margin-top: 0;
+    }
+    #footer .contaner .center-card {
+        width: 50%;
+        order: 0;
+    }
+    #footer .contaner .right-card {
+        width: 25%;
+    }
+}
+
+
+/* -------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------- */
